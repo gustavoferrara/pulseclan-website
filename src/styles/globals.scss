@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Bai Jamjuree, Helvetica, sans-serif, Arial;
+  line-height: 1.3;
+  background-color: rgb(17, 17, 17);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#wrapper {
+  color: white;
+  width: 100%;
+}
