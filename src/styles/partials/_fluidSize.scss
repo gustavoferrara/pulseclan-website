@@ -1,0 +1,15 @@
+// Function to scale pixel sizing fluidly between two set viewport sizes
+@function fluidSize(
+  $minSize,
+  $maxSize,
+  $minViewport: 320,
+  $maxViewport: 540,
+  $viewDirection: 100vw,
+  $unitType: 1px
+) {
+  @return calc(
+    $minSize * $unitType + ($maxSize - $minSize) *
+      ($viewDirection - $minViewport * $unitType) /
+      ($maxViewport - $minViewport)
+  );
+}
