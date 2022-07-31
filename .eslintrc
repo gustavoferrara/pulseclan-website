@@ -10,7 +10,11 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "validate-jsx-nesting"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -21,6 +25,7 @@
     "prettier"
   ],
   "rules": {
+    "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
@@ -35,11 +40,14 @@
       }
     ],
     "no-unused-vars": 0,
+    "@next/next/no-img-element": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
+    "no-useless-escape": "off",
     "react-hooks/exhaustive-deps": "off"
   }
 }

@@ -27,9 +27,10 @@
       "@/styles/*": ["src/styles/*"],
       "@/public/*": ["public/*"],
       "@/types/*": ["src/types/*"],
-      "@/hooks/*": ["src/hooks/*"]
+      "@/hooks/*": ["src/hooks/*"],
+      "@/packages/*": ["packages/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/server"]
 }

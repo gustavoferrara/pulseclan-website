@@ -11,9 +11,12 @@
 # next.js
 /.next/
 /out/
+/.swc/
 
 # production
 /build
+/dist
+tsconfig.tsbuildinfo
 
 # misc
 .DS_Store
@@ -27,6 +30,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
