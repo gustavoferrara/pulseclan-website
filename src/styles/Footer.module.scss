@@ -1,0 +1,78 @@
+.footer {
+  padding: 7vw 10vw;
+  background-color: #14161b;
+}
+
+.footer_copyright_section {
+  text-align: center;
+  max-width: 876px;
+  margin: 0 auto;
+}
+
+.pulse_logo {
+  filter: invert(90%) sepia(25%) saturate(4224%) hue-rotate(360deg)
+    brightness(105%) contrast(104%);
+  width: 60px;
+}
+
+.copyright_text {
+  font-size: 15px;
+}
+
+.footer_links_section {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: center;
+  // align-content: center;
+  width: fit-content;
+  max-width: 651px;
+  margin: 0 auto;
+  margin-top: 20px;
+  // text-align: center;
+}
+
+.footer_links_container {
+  margin: 30px 5px;
+}
+
+.footer_links_title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.footer_link {
+  font-weight: normal;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+  display: block;
+  color: #818181;
+
+  &:hover {
+    color: #ffe200;
+  }
+}
+
+// 480px
+@media screen and (min-width: 30em) {
+  .footer_links_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .footer_links_container {
+    margin: 30px 25px;
+  }
+}
+
+// 1100px
+@media screen and (min-width: 68.75em) {
+  .footer {
+    padding: 77px 110px;
+  }
+}
