@@ -1,0 +1,666 @@
+@use './partials/fluidSize' as *;
+$navbar-height: 4.5625rem;
+$base-padding: fluidSize(13, 80, 320, 768);
+
+.recruitment_wrapper {
+  margin-top: $navbar-height;
+  overflow: hidden;
+  position: relative;
+  background-color: #1a1d23;
+}
+
+.hero_wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg_squaresimg {
+  position: absolute;
+  width: calc((100vw + 60vh) / 2);
+  height: fit-content;
+  top: -20%;
+  right: -40%;
+}
+
+.hero_container {
+  // padding: fluidSize(100, 120, 320, 768, 100vh) 0 20px 0;
+  padding: fluidSize(50, 120, 320, 768, 100vh) 0;
+}
+
+.hero {
+  padding: 0 $base-padding;
+  width: fit-content;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.hero_header {
+  font-weight: 700;
+  font-size: 23px;
+  font-size: fluidSize(23, 27, 320, 1000);
+  font-size: fluidSize(23, 32, 320, 570);
+  margin-bottom: 13px;
+  text-shadow: 0px 2px 10px #1a1d23;
+}
+
+.hero_header_subtext {
+  font-size: fluidSize(18, 22, 320, 570);
+  display: block;
+  font-weight: 500;
+  text-shadow: 0px 2px 10px #1a1d23;
+  & > span {
+    color: #ffe200;
+  }
+}
+
+.hero_paragraph {
+  font-size: 18px;
+  // color: #949494;
+  color: #b8b8b8;
+  text-shadow: 0px 2px 10px #1a1d23;
+}
+
+.applicant_type_btn {
+  // all: unset;
+  // outline: 1px solid white;
+  // padding: 7px 25px;
+  // border-radius: 100px;
+  // font-size: 21px;
+  // font-weight: 600;
+  // margin: 20px 0;
+  // cursor: pointer;
+  // display: block;
+  // margin: 25px auto 25px auto;
+  // width: fit-content;
+  // transition: background-color 0.1s ease-out, outline 25ms ease-out,
+  //   text-shadow 0.1s ease-out;
+  // user-select: none;
+  all: unset;
+  outline: 1px solid white;
+  padding: 7px 25px;
+  border-radius: 100px;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 20px 0;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto 25px auto;
+  width: fit-content;
+  transition: outline 0.1s ease-out, color 0.1s ease-out;
+  user-select: none;
+
+  &:hover {
+    // color: #ffe200;
+    outline: 1px solid #ffe200;
+  }
+}
+
+.applicant_type_btn_active {
+  // background-color: #ffe200;
+  // outline: 1px solid hsla(0, 0%, 0%, 0);
+  outline: 2px solid #ffe200;
+  color: #ffe200;
+  transition: outline 0.1s ease-out, color 0.1s ease-out;
+  // text-shadow: 0px 3px 10px #000000;
+
+  &:hover {
+    outline: 2px solid #ffe200;
+  }
+}
+
+//? Form section
+
+.form_bgcolor {
+  background-color: #14161b;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.form_wrapper {
+  padding: 0 calc($base-padding + 5px);
+  background-color: #14161b;
+  padding-top: 50px;
+  position: relative;
+}
+
+.applicant_images {
+  display: none;
+}
+
+// .form_container {
+// }
+
+.form_header {
+  font-size: 27px;
+  text-align: center;
+
+  & > span > span {
+    color: #ffe200;
+  }
+}
+
+.applicant_type_container {
+  // width: fit-content;
+  max-width: 590px;
+  margin: 0 auto;
+
+  & > h2 {
+    text-align: center;
+    font-weight: 500;
+  }
+  margin-bottom: 50px;
+
+  // 570px
+  @media screen and (min-width: 35.625em) {
+    & > div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3px;
+}
+
+.form_label {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 3px;
+}
+
+.form_input {
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  height: 20px;
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 16px;
+  font-family: Bai Jamjuree;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.username_age_container {
+  & input {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+textarea.form_input {
+  resize: none;
+  height: 50px;
+  padding: 5px 10px;
+}
+
+.necessary_form_input {
+  &::after {
+    content: '*';
+    color: #ffe200;
+    display: inline-block;
+  }
+}
+
+.requiredfields_text {
+  margin: 20px 0;
+
+  & > span {
+    font-size: 18px;
+    color: #ffe200;
+  }
+}
+
+//? Responsibilities section
+
+.responsibilities_header {
+  font-size: 27px;
+
+  & > span {
+    color: #ffe200;
+  }
+
+  // 495px
+  @media screen and (min-width: 30.9375em) {
+    text-align: center;
+  }
+}
+
+.responsibilities_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 30px 0;
+
+  & > img {
+    align-self: flex-start;
+    width: 60px;
+    // margin-left: fluidSize(20, 0, 320, 768);
+    margin-right: 20px;
+  }
+
+  & > div {
+    width: 55%;
+  }
+
+  & h4 {
+    font-size: 23px;
+    font-weight: 600;
+  }
+
+  & p {
+    font-size: 18px;
+  }
+}
+
+//*
+
+.form_terms_container {
+  margin: 15px auto;
+  width: fit-content;
+}
+
+.form_terms_checkbox {
+  display: inline-block;
+  transform: scale(1.2);
+  vertical-align: middle;
+}
+
+.form_terms_label {
+  font-size: 18px;
+  margin-left: 10px;
+  vertical-align: middle;
+
+  & > span {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffe200;
+      border-bottom: 1px solid yellow;
+    }
+  }
+}
+
+.form_errormsg {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0;
+  border: 1px solid red;
+  background-color: rgb(31, 17, 17);
+  padding: 11px 15px;
+  border-radius: 5px;
+}
+
+.submit_btn {
+  // all: unset;
+  // display: block;
+  // cursor: pointer;
+  // font-size: 27px;
+  // font-weight: 700;
+  // background-color: #f7da00;
+  // text-shadow: 0px 2px 10px #00000056;
+  // padding: 5px 25px;
+  // border-radius: 100px;
+  // position: relative;
+  // margin: 30px auto 0 auto;
+  all: unset;
+  display: block;
+  cursor: pointer;
+  font-size: 27px;
+  font-weight: 700;
+  // background-color: #f7da00;
+  outline: 2px solid white;
+  text-shadow: 0px 2px 10px #00000056;
+  padding: 5px 25px;
+  border-radius: 100px;
+  position: relative;
+  margin: 30px auto 0 auto;
+  transition: color 0.1s ease-out, outline 0.1s ease-out;
+  user-select: none;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    background-image: url('/recruitment/sendicon.svg');
+    filter: invert(100%) sepia(0%) saturate(191%) hue-rotate(33deg)
+      brightness(118%) contrast(100%);
+    background-size: 27px 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 19%;
+    right: 16%;
+  }
+
+  &:hover {
+    color: #ffe200;
+    outline: 2px solid #ffe200;
+  }
+
+  &:hover::after {
+    filter: invert(74%) sepia(83%) saturate(534%) hue-rotate(356deg)
+      brightness(106%) contrast(108%);
+  }
+}
+
+//? Media queries
+
+// 768px
+@media screen and (min-width: 48em) {
+  .form_label {
+    text-align: left;
+  }
+
+  .username_age_container {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      &:first-child {
+        width: 65%;
+      }
+
+      &:last-child {
+        width: 30%;
+      }
+    }
+  }
+}
+
+// 1000px
+@media screen and (min-width: 62.5em) {
+  .hero_wrapper {
+    margin: 0;
+    max-width: 1100px;
+    padding: 0 $base-padding;
+  }
+
+  .bg_squaresimg {
+    top: -25%;
+    width: 800px;
+    filter: brightness(100%);
+  }
+
+  .hero_container {
+    // padding: fluidSize(50, 120, 320, 768, 100vh) 0;
+    padding: 70px 0;
+    // margin: ;
+    align-self: flex-start;
+    width: fit-content;
+  }
+
+  .hero {
+    text-align: left;
+    // padding: 0 $base-padding;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .hero_paragraph {
+    width: 550px;
+    // width: fluidSize(780, 0, 1000, 1100);
+  }
+
+  //*
+
+  .form_images_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .form_container {
+  //   border: 2px solid blue;
+  //   position: relative;
+  // }
+
+  .form_wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+  }
+
+  .applicant_images {
+    display: block;
+    position: absolute;
+    right: -45%;
+    right: -400px;
+    right: 150px;
+    right: fluidSize(-450, 150, 1000, 1730);
+    top: 10%;
+    z-index: 3;
+
+    & > img {
+      display: block;
+      border-radius: 20px;
+
+      &:first-child {
+        height: 300px;
+        margin-left: 100px;
+      }
+
+      &:nth-child(2) {
+        height: 200px;
+        margin: 30px 0;
+      }
+
+      &:last-child {
+        height: 150px;
+        margin-left: 50px;
+      }
+    }
+  }
+  // .applicant_images {
+  //   display: block;
+  //   position: absolute;
+  //   text-align: center;
+  //   right: -45%;
+  //   top: 10%;
+
+  //   & > img {
+  //     display: block;
+  //     border-radius: 20px;
+
+  //     &:first-child {
+  //       height: 300px;
+  //       margin-left: 100px;
+  //     }
+
+  //     &:nth-child(2) {
+  //       height: 200px;
+  //       margin: 30px 0;
+  //     }
+
+  //     &:last-child {
+  //       height: 150px;
+  //       margin-left: 50px;
+  //     }
+  //   }
+  // }
+
+  //*
+
+  .applicant_type_container {
+    margin: 0 0 50px 0;
+
+    & > h2 {
+      width: fit-content;
+    }
+
+    & > div > button {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .form_header {
+    width: fit-content;
+    font-size: 50px;
+    text-align: left;
+
+    & > span {
+      display: block;
+    }
+  }
+
+  .form {
+    margin: 0;
+    width: 100%;
+  }
+
+  .form_inputs {
+    width: 80%;
+  }
+
+  .username_age_container {
+    & label {
+      margin-top: 20px;
+    }
+  }
+
+  .requiredfields_text {
+    margin-bottom: 0;
+  }
+
+  //*
+
+  .responsibilities_header {
+    text-align: left;
+    font-size: 44px;
+    margin: 50px 0;
+  }
+
+  .responsibilities_wrapper {
+    display: flex;
+  }
+
+  .responsibilities_section {
+    &:first-child {
+      margin-right: 100px;
+      // margin-right: 15%;
+    }
+  }
+
+  .responsibilities_container {
+    padding-top: 0;
+
+    & > div {
+      width: auto;
+    }
+  }
+
+  .form_terms_container,
+  .submit_btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// 1100px
+@media screen and (min-width: 68.75em) {
+  .hero_wrapper {
+    width: 1100px;
+    height: 370px;
+    padding: 0 134px;
+  }
+
+  .hero_header {
+    font-size: 51px;
+  }
+
+  .hero_header_subtext {
+    font-size: 30px;
+  }
+
+  //*
+
+  .form_wrapper {
+    width: 1100px;
+    padding: 50px 134px 0;
+  }
+
+  .form_container {
+    width: 830px;
+  }
+}
+
+// 1450px
+@media screen and (min-width: 90.625em) {
+  .applicant_images {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      &:first-child {
+        height: auto;
+        width: 600px;
+        margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        height: auto;
+        width: 600px;
+        margin: 30px 0;
+      }
+
+      &:last-child {
+        height: auto;
+        width: 600px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// 1730px
+@media screen and (min-width: 108.125em) {
+  .hero_wrapper {
+    margin: 0 auto;
+  }
+
+  // .form_bgcolor {
+  //   display: flex;
+  //   flex-direction: row-reverse;
+  // }
+
+  // .applicant_images {
+  //   position: relative;
+  //   height: fit-content;
+  //   margin-top: 240px;
+  // }
+
+  .applicant_images {
+    right: fluidSize(-100, 250, 1730, 2500);
+  }
+
+  .form_wrapper {
+    // padding: 50px $base-padding 0;
+    margin: 0 auto;
+    // display: flex;
+  }
+}
