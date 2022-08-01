@@ -1,0 +1,83 @@
+.transition_container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+  background: linear-gradient(
+    180deg,
+    rgb(35, 39, 48) 0%,
+    rgba(20, 22, 27, 1) 100%
+  );
+  display: none;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  clip-path: polygon(0 0, 100% 0%, 100% 1%, 0 1%);
+  // clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  transition: clip-path 0.45s ease-in-out, opacity 0.1s ease-out;
+}
+
+.pulse_logo {
+  filter: invert(90%) sepia(25%) saturate(4224%) hue-rotate(360deg)
+    brightness(105%) contrast(104%);
+  width: 160px;
+  height: 160px;
+  // transform: rotateY(0deg);
+  // transform: rotateY(-1deg);
+
+  animation: pulsespinner 2s linear infinite;
+}
+
+@keyframes pulsespinner {
+  0% {
+    transform: rotateY(0deg);
+    // scale: 80%;
+  }
+  50% {
+    transform: rotateY(180deg);
+    // scale: 100%;
+  }
+  100% {
+    transform: rotateY(0deg);
+    // scale: 80%;
+  }
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+
+  & .path {
+    stroke: rgb(255, 255, 255);
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
