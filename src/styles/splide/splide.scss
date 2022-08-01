@@ -1,0 +1,160 @@
+@use '../partials/fluidSize' as *;
+
+.splide {
+  position: relative;
+}
+
+.splide__arrows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: fit-content;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 fluidSize(5, 30, 320, 1100);
+}
+
+.splide__arrow {
+  all: unset;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.74);
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  width: fluidSize(15, 50, 320, 1100);
+  height: fluidSize(15, 50, 320, 1100);
+  position: relative;
+
+  &:first-child {
+    transform: rotate(180deg);
+  }
+
+  & > svg {
+    position: absolute;
+    // top: 20%;
+    // right: 15%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    filter: invert(100%);
+    width: fluidSize(15, 40, 320, 1100);
+    height: fluidSize(15, 40, 320, 1100);
+  }
+}
+
+.splide__slide {
+  margin-right: 10px;
+}
+
+//*
+
+.splide_thumbnail_carousel {
+  margin-top: fluidSize(10, 45, 320, 1100);
+
+  .Wallpapers_wallpaper_container__p7BE7 {
+    cursor: pointer;
+  }
+
+  .Wallpapers_wallpaper_detailscontainer__DcJPq {
+    display: none;
+  }
+
+  .Wallpapers_wallpaper_downloadcontainer__Y36mM {
+    display: none;
+  }
+
+  .Wallpapers_wallpaper_image__rp_Tr {
+    border-radius: 10px;
+
+    transition: border 50ms ease-out;
+  }
+
+  .splide__slide.is-active {
+    & img {
+      border: 2px solid white;
+      transition: border 50ms ease-out;
+    }
+  }
+
+  .mobile_thumb_carousel {
+    max-width: 160px;
+  }
+}
+
+//?
+
+.Wallpapers_mobile_carousel__r062G {
+  .splide__arrows {
+    // fluidSize(5, 10, 320, 500)
+
+    // 347px
+    @media screen and (min-width: 21.6875em) {
+      padding: 0 fluidSize(5.8, 370, 320, 1100);
+    }
+
+    // 1100px
+    @media screen and (min-width: 68.75em) {
+      padding: 0 370px;
+    }
+  }
+
+  .splide__arrow {
+    width: fluidSize(15, 30, 320, 1100);
+    height: fluidSize(15, 30, 320, 1100);
+
+    & > svg {
+      width: fluidSize(15, 25, 320, 1100);
+      height: fluidSize(15, 25, 320, 1100);
+    }
+
+    // 1100px
+    @media screen and (min-width: 68.75em) {
+      width: 30px;
+      height: 30px;
+
+      & > svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .Wallpapers_wallpaper_detailscontainer__DcJPq {
+    max-width: 312px;
+  }
+}
+
+//?
+
+// 768px
+@media screen and (min-width: 48em) {
+  .splide__arrow {
+    border: 2px solid white;
+  }
+}
+
+// 1100px
+@media screen and (min-width: 68.75em) {
+  .splide__arrows {
+    padding: 0 30px;
+  }
+
+  .splide__arrow {
+    width: 50px;
+    height: 50px;
+
+    & > svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .splide_thumbnail_carousel {
+    margin-top: 45px;
+  }
+}
